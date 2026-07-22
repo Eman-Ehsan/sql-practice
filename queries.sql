@@ -1,0 +1,10 @@
+SELECT * FROM employees;
+SELECT name, salary FROM employees WHERE department = 'QA';
+SELECT name, salary FROM employees ORDER BY salary DESC;
+SELECT department, AVG(salary) FROM employees GROUP BY department;
+SELECT department, COUNT(*) FROM employees GROUP BY department;
+SELECT name, hire_date FROM employees WHERE salary > 60000;
+SELECT name FROM employees WHERE name LIKE 'A%';
+UPDATE employees SET salary = salary + 5000 WHERE department = 'QA';
+SELECT name, salary FROM employees WHERE salary > (SELECT AVG(salary) FROM employees);
+DELETE FROM employees WHERE id = 4;
